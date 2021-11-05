@@ -11,7 +11,7 @@
         <el-card class="box-card" style="width: 1000px" v-for="(article, index) in articlesData" v-bind:key="index">
           <template #header>
             <div class="card-header">
-              <span>{{article.title}}</span>
+              <span>{{article.articleTitle}}</span>
             </div>
           </template>
           <div class="text-item">
@@ -38,7 +38,7 @@ export default {
   name: "articles",
   data() {
     return {
-      userName: "Awom",
+      userName: window.localStorage.getItem("username"),
       articlesData: [{
         articleTitle: '',
         articleContent: '',
@@ -60,7 +60,7 @@ export default {
     },
     showAllArticleHelp() {
       showAllArticle().then((myData) => {
-        console.log("show all article(print mydata");
+        console.log("show all article(print my data");
         console.log(myData);
         if (myData === "") {
           this.$router.push('/login');

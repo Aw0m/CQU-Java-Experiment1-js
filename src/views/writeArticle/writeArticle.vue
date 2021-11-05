@@ -27,8 +27,8 @@ export default {
   methods: {
     submit() {
       addArticle(this.article)
+      this.$router.push("/home")
       alert("已发送!")
-      this.$router.push("/articles")
     }
   }
 }
