@@ -33,8 +33,8 @@ export default {
       let res = await signUp(userInfo);
       console.log(res);
       if (res.result === "ok") {
-        window.sessionStorage.setItem("token", res.token);
-        window.sessionStorage.setItem("username", this.userName);
+        window.localStorage.setItem("token", res.token);
+        window.localStorage.setItem("username", this.userName);
         alert("登陆成功")
         await this.$router.push('/login');
       } else {

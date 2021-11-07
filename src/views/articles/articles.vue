@@ -51,12 +51,13 @@ export default {
     //   this.userName
     // },
     layout() {
-      window.localStorage.setItem("token", "");
+      window.localStorage.removeItem("token");
+      window.localStorage.removeItem("username");
       alert("退出登陆");
       this.$router.push('/login')
     },
     backHome() {
-      this.$router.push('/home')
+      this.$router.push('/home');
     },
     showAllArticleHelp() {
       showAllArticle().then((myData) => {

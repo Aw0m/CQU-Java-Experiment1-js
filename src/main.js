@@ -1,5 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
+// import VueCookies from 'vue-cookies'
+
 import router from './router/index'
 
 import mavonEditor from 'mavon-editor'
@@ -13,6 +15,8 @@ import 'element-ui/lib/theme-chalk/index.css'//element-ui的css
 
 Vue.use(ElementUI) //使用elementUI
 Vue.use(mavonEditor)
+// Vue.use(VueCookies)
+
 
 new Vue({
   render: h => h(App),

@@ -32,7 +32,7 @@ export default {
       let userInfo = {"username": this.userName, "password": this.userPassword};
       let judge = await login(userInfo);
       if (judge.result === "ok") {
-        window.localStorage.setItem("token", judge.token);
+        window.localStorage.setItem("token", judge.token);   //return this
         window.localStorage.setItem("username", this.userName);
         console.log(judge);
         console.log((judge.token));
